@@ -1,0 +1,37 @@
+<screen>
+    <styles>
+        <style name="style_main" bg_color="0x00688a" />
+        <style name="dark" bg_color="0x333" />
+        <style name="left_panel" bg_color="0x2d2d30" pad_all="0" margin_all="0" border_width="0" outline_width="0" />
+        <style name="right_panel" bg_color="0x1e1e1e" />
+    </styles>
+
+    <!-- 整体容器 -->
+    <view flex_flow="column" width="800" height="480" style_pad_all="0" style_margin_all="0" style_border_width="0" style_outline_width="0" style_bg_color="0x000000">
+        
+        <!-- 上部分：高度40像素 -->
+        <header image_name="flower" style_pad_all="0" style_margin_all="0" style_pad_row="0" style_pad_column="0" style_outline_width="0"/>
+        
+        <!-- 下部分：占据剩余空间 -->
+        <view flex_flow="row_reverse" width="800" flex_grow="1" style_pad_all="0" style_margin_all="0" style_border_width="0" style_outline_width="0" style_bg_color="0x000000" style_pad_row="0" style_pad_column="0">
+            
+            <!-- 右部分：测试简单显示 -->
+            <rightPanel >
+            </rightPanel>
+            
+            <!-- 左部分：3个按钮上下排列 -->
+            <view flex_flow="column" width="200" style_pad_all="0" style_max_width="200" style_margin_all="0" style_border_width="0" style_outline_width="0" height="100%" >
+                <style name="left_panel" />
+                <tabButton image_name="flower" btn_text="Offline" width="200" style_margin_all="0" style_border_width="0" style_outline_width="0" />
+                <tabButton image_name="flower" btn_text="System" width="200" style_margin_all="0" style_border_width="0" style_outline_width="0" />
+                <tabButton image_name="flower" btn_text="Diagnostics" width="200" style_margin_all="0" style_border_width="0" style_outline_width="0" />
+                <lv_obj flex_grow="1" style_bg_opa="0" style_margin_all="0" style_border_width="0" style_outline_width="0"/>
+                <view flex_flow="row" width="200" style_pad_all="0" style_margin_all="0" style_border_width="0" style_bg_opa="0" height="40">
+                    <lv_obj flex_grow="1" style_bg_opa="0" tyle_pad_all="0" style_margin_all="0" style_border_width="0" height="40"/>
+                    <lv_switch />
+                    <lv_obj flex_grow="1" style_bg_opa="0" tyle_pad_all="0" style_margin_all="0" style_border_width="0" height="40"/>
+                </view>
+            </view>
+        </view>
+    </view>
+</screen>
