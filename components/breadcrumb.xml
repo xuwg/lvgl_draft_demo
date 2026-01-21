@@ -1,0 +1,19 @@
+<!-- breadcrumb.xml -->
+<component>
+    <api>
+        <prop name="path" type="string" />
+        <prop name="current_index" type="int" />
+    </api>
+    
+    <view flex_flow="row" style_bg_opa="0" style_border_width="0" style_pad_all="5">
+        <lv_label text="Offline" style_text_color="0x333" flag_clickable="true" >
+        <!-- <event type="click">
+            <action type="navigate" target="network.xml" />
+        </event> -->
+        <event_cb callback="on_breadcrumb_click" trigger="click" user_data="offline" />
+        </lv_label>
+        
+        <lv_label text=" / " style_text_color="0x333" />
+        <lv_label text="Network" style_text_color="0x00aa00" />
+    </view>
+</component>
