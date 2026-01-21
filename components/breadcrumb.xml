@@ -6,7 +6,7 @@
     </api>
     
     <view flex_flow="row" style_bg_opa="0" style_border_width="0" style_pad_all="5">
-        <lv_label text="Offline" style_text_color="0x333" flag_clickable="true" >
+        <lv_label text="Offline" style_text_color="0x333" >
         <!-- <event type="click">
             <action type="navigate" target="network.xml" />
         </event> -->
