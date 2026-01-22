@@ -1,0 +1,23 @@
+<screen>
+	<styles>
+		<style name="style_main" bg_color="0x00688a" />
+		<style name="dark" bg_color="0x333" />
+	</styles>
+
+	<view flex_flow="column" width="800" height="480">
+		<!-- <style name="dark" /> -->
+
+		<header image_name="flower"/>
+		<view flex_flow="row" width="100%" height="400" bg_color="0x222">
+			<!-- <view flex_flow="column" width="content" height="400">
+				<tabButton image_name="flower" btn_text="Offline" style_bg_color="0x111" />
+				<tabButton image_name="flower" btn_text="System" style_bg_color="0x111" />
+				<tabButton image_name="flower" btn_text="Diagnostics" style_bg_color="0x111" />
+			</view> -->
+			<view flex_flow="column" width="300" height="400" style_margin_left="10" bg_color="0xFF0000">
+				<lv_label text="Offline Screen Content Goes Here" style_text_color="0xff0000" style_text_align="center" style_pad_top="20" />
+				<tabButton image_name="flower" btn_text="Diagnostics" style_bg_color="0x111" />
+			</view>
+		</view>
+	</view>
+</screen>
