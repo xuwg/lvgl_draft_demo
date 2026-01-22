@@ -1,0 +1,49 @@
+<!-- rightPanel.xml -->
+<component>
+	<api>
+		<prop name="image_name" type="string" />
+	</api>
+
+	<consts>
+		<int name="thin" value="2" />
+	</consts>
+
+	<styles>
+		<style name="pressed_style" border_width="#thin" border_color="0xff0000" />
+	</styles>
+
+	<view  flex_flow="column" flex_grow="1" style_bg_color="0xff0000" style_pad_all="0" style_margin_all="0" style_border_width="0" style_outline_width="0" height="100%" >
+        <lv_label text="Offline" style_text_color="0xffffff" />
+        
+        <!-- Grid布局容器 -->
+        <lv_obj flex_grow="1" style_pad_all="0" style_margin_all="0" style_border_width="0" style_outline_width="0" width="100%" style_layout="grid" style_grid_column_dsc_array="fr(1) fr(1)" style_grid_row_dsc_array="50 50 50 50 50" style_pad_column="10" style_pad_row="10">
+            <!-- 第1行第1列 -->
+            <tabButton image_name="images/orange-flower.png"  btn_text="Network" style_text_color="0xffffff" height="40" style_grid_cell_column_pos="0" style_grid_cell_column_span="1" style_grid_cell_row_pos="0" style_grid_cell_row_span="2" style_grid_cell_x_align="stretch" style_grid_cell_y_align="stretch"/>
+            <!-- 第1行第2列 -->
+            <tabButton image_name="images/orange-flower.png"  btn_text="Buzzer" style_text_color="0xffffff" height="40" style_grid_cell_column_pos="1" style_grid_cell_column_span="1" style_grid_cell_row_pos="0" style_grid_cell_row_span="1" style_grid_cell_x_align="stretch" style_grid_cell_y_align="stretch"/>
+            
+            <!-- 第2行第1列 -->
+            <!-- <tabButton image_name="flower"  btn_text="Backlight" style_text_color="0xffffff" height="40" style_grid_cell_column_pos="0" style_grid_cell_column_span="1" style_grid_cell_row_pos="1" style_grid_cell_row_span="1" style_grid_cell_x_align="stretch" style_grid_cell_y_align="stretch"/> -->
+            <!-- 第2行第2列 -->
+            <tabButton image_name="flower"  btn_text="Self Test" style_text_color="0xffffff" height="40" style_grid_cell_column_pos="1" style_grid_cell_column_span="1" style_grid_cell_row_pos="1" style_grid_cell_row_span="1" style_grid_cell_x_align="stretch" style_grid_cell_y_align="stretch"/>
+            
+            <!-- 第3行第1列 -->
+            <tabButton image_name="flower"  btn_text="Option" style_text_color="0xffffff" height="40" style_grid_cell_column_pos="0" style_grid_cell_column_span="1" style_grid_cell_row_pos="2" style_grid_cell_row_span="1" style_grid_cell_x_align="stretch" style_grid_cell_y_align="stretch"/>
+            <!-- 第3行第2列 -->
+            <tabButton image_name="flower"  btn_text="IO Manager" style_text_color="0xffffff" height="40" style_grid_cell_column_pos="1" style_grid_cell_column_span="1" style_grid_cell_row_pos="2" style_grid_cell_row_span="1" style_grid_cell_x_align="stretch" style_grid_cell_y_align="stretch"/>
+            
+            <!-- 第4行第1列 -->
+            <tabButton image_name="flower"  btn_text="Web Gate" style_text_color="0xffffff" height="40" style_grid_cell_column_pos="0" style_grid_cell_column_span="1" style_grid_cell_row_pos="3" style_grid_cell_row_span="1" style_grid_cell_x_align="stretch" style_grid_cell_y_align="stretch"/>
+            <!-- 第4行第2列 -->
+            <tabButton image_name="flower"  btn_text="MultiMedia" style_text_color="0xffffff" height="40" style_grid_cell_column_pos="1" style_grid_cell_column_span="1" style_grid_cell_row_pos="3" style_grid_cell_row_span="1" style_grid_cell_x_align="stretch" style_grid_cell_y_align="stretch"/>
+            
+            <!-- 第5行第2列（右对齐） -->
+            <tabButton image_name="flower"  btn_text="Secure Connect" style_text_color="0xffffff" height="40" style_grid_cell_column_pos="0" style_grid_cell_column_span="1" style_grid_cell_row_pos="4" style_grid_cell_row_span="1" style_grid_cell_x_align="stretch" style_grid_cell_y_align="stretch"/>
+        </lv_obj>
+        
+        <lv_obj flex_flow="row" height="40" width="100%" style_bg_opa="0" style_pad_all="0" style_margin_all="0" style_border_width="0" style_outline_width="0" style_margin_bottom="10">
+            <lv_obj flex_grow="1" style_bg_opa="0" style_border_width="0" style_outline_width="0" style_margin_all="0" height="40"/>
+            <tabButton image_name="flower"  btn_text="To Run Mode" style_text_color="0xffffff" style_margin_right="20" />
+        </lv_obj>
+    </view>
+</component>

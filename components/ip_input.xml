@@ -1,0 +1,97 @@
+<!-- ip_input.xml -->
+<component>
+    <api>
+        <prop name="ip1" type="int" default="192" />
+        <prop name="ip2" type="int" default="168" />
+        <prop name="ip3" type="int" default="1" />
+        <prop name="ip4" type="int" default="1" />
+        <prop name="width" type="int" default="100" />
+    </api>
+    
+    <styles>
+        <style name="ta_no_border" 
+               border_width="0" 
+               outline_width="0"
+               outline_pad="0"
+               outline_opa="0"
+               bg_color="0xffffff"
+               text_align="center" />
+    </styles>
+    
+    <view flex_flow="row" 
+          width="$width"
+          height="50"
+          style_bg_color="0xffffff"
+          style_border_width="1"
+          style_border_color="0xcccccc"
+          style_radius="5"
+          style_pad_all="5" 
+          style_flex_cross_align="center">
+        
+        <!-- 第一段 (0-255) -->
+        <lv_textarea height="40"
+                 flex_grow="1"
+                 text="$ip1"
+                 one_line="true"
+                 max_length="3"
+                 accepted_chars="0123456789"
+                 event_cb="ip_textarea_insert_cb">
+            <style name="ta_no_border" />
+            <style name="ta_no_border" selector="focused" />
+            <style name="ta_no_border" selector="edited" />
+            <style name="ta_no_border" selector="focus_key" />
+        </lv_textarea>
+        
+        <!-- 分隔符 . -->
+        <lv_label text="." height="100%" style_text_color="0x333333" style_bg_color="0xff0000" style_bg_opa="0" style_pad_top="10" style_pad_bottom="10" />
+        
+        <!-- 第二段 (0-255) -->
+        <lv_textarea height="40"
+                 flex_grow="1"
+                 text="$ip2"
+                 one_line="true"
+                 max_length="3"
+                 accepted_chars="0123456789"
+                 event_cb="ip_textarea_insert_cb">
+            <style name="ta_no_border" />
+            <style name="ta_no_border" selector="focused" />
+            <style name="ta_no_border" selector="edited" />
+            <style name="ta_no_border" selector="focus_key" />
+        </lv_textarea>
+        
+        <!-- 分隔符 . -->
+        <lv_label text="." height="100%" style_text_color="0x333333" style_bg_color="0xff0000" style_bg_opa="0" style_pad_top="10" style_pad_bottom="10" />
+        
+        <!-- 第三段 (0-255) -->
+        <lv_textarea height="40"
+                 flex_grow="1"
+                 text="$ip3"
+                 one_line="true"
+                 max_length="3"
+                 accepted_chars="0123456789"
+                 event_cb="ip_textarea_insert_cb">
+            <style name="ta_no_border" />
+            <style name="ta_no_border" selector="focused" />
+            <style name="ta_no_border" selector="edited" />
+            <style name="ta_no_border" selector="focus_key" />
+        </lv_textarea>
+        
+        <!-- 分隔符 . -->
+        <lv_label text="." height="100%" style_text_color="0x333333" style_bg_color="0xff0000" style_bg_opa="0" style_pad_top="10" style_pad_bottom="10" />
+        
+        <!-- 第四段 (0-255) -->
+        <lv_textarea height="40"
+                 flex_grow="1"
+                 text="$ip4"
+                 one_line="true"
+                 max_length="3"
+                 accepted_chars="0123456789"
+                 event_cb="ip_textarea_insert_cb">
+            <style name="ta_no_border" />
+            <style name="ta_no_border" selector="focused" />
+            <style name="ta_no_border" selector="edited" />
+            <style name="ta_no_border" selector="focus_key" />
+        </lv_textarea>
+        
+    </view>
+</component>

@@ -1,0 +1,23 @@
+<!-- my_button.xml -->
+<component>
+	<api>
+		<prop name="image_name" type="string" />
+		<prop name="btn_text" type="string" />
+	</api>
+
+	<consts>
+		<int name="thin" value="2" />
+	</consts>
+
+	<styles>
+		<style name="pressed_style" border_width="#thin" border_color="0xff0000" />
+	</styles>
+
+	<view extends="lv_button" flex_flow="row" style_radius="5" style_margin_all="0" style_border_width="0" style_outline_width="0" style_pad_all="5">
+		<style name="pressed_style" selector="pressed" />
+
+		<lv_image src="flower" width="48" height="48" style_margin_right="5"/>
+		
+		<lv_label text="$btn_text" />
+	</view>
+</component>

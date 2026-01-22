@@ -1,0 +1,32 @@
+<!-- header.xml -->
+<component>
+	<styles>
+		<style name="titlebar" bg_color="0x2d2d30" pad_all="0" margin_all="0" border_width="0" outline_width="0"/>
+		<style name="titlebar_text" text_color="0xffffff" text_font="montserrat_14" />
+		<style
+			name="titlebar_btn_close"
+			bg_color="0xe81123"
+			text_color="0xffffff"
+			radius="0"
+			border_width="0"
+			pad_all="8"
+		/>
+	</styles>
+
+	<api>
+		<prop name="image_name" type="string" />
+	</api>
+
+	<view flex_flow="row" width="100%" height="40" style_border_width="2" style_border_color="0x00ff00" style_border_side="bottom" style_pad_all="0" style_margin_all="0" style_pad_row="0" style_pad_column="0">
+		<style name="titlebar" />
+
+		<lv_image src="$image_name" width="20" height="20" style_margin_all ="10" />
+		<lv_image src="LV_SYMBOL_BATTERY_1" width="20" height="20" style_margin_right="5" />
+
+
+		<lv_label text="2026-1-9 14:01" flex_grow="1" style_text_align="right" style_pad_right="10" style_pad_top="10">
+			<style name="titlebar_text" />
+		</lv_label>
+
+	</view>
+</component>
