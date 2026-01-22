@@ -1,0 +1,153 @@
+<component>
+    <consts>
+        <color name="green" value="0x00ff00"/>
+        <color name="day_bg" value="0xf7f7f7"/>
+        <color name="day_fg" value="0x222222"/>
+        <color name="night_bg" value="0x131d1d"/>
+        <color name="night_fg" value="0xffffff"/>
+    </consts>
+
+	<styles>
+		<style name="style_day"
+        style_bg_color="#day_bg"
+        style_text_color="#day_fg"
+        style_border_color="#green"/>
+
+		<style name="style_night"
+        style_bg_color="#night_bg"
+        style_text_color="#night_fg"
+        style_border_color="#green"/>
+
+		<style name="header_day"
+        style_bg_color="#day_bg"
+        style_text_color="#day_fg"/>
+
+		<style name="header_night"
+        style_bg_color="#night_bg"
+        style_text_color="#night_fg"/>
+	</styles>
+    
+    <view extends="lv_obj" name="main" width="100%" height="100%" 
+        flex_flow="column" style_pad_all="0" styles="style_night">
+        <style name="style_night" />
+        <!-- header -->
+        <lv_obj width="100%" height="40"
+            style_pad_all="0" style_margin_all="0"
+            style_border_width="2" style_border_side="bottom" style_radius="0"
+            flex_flow="row"
+            styles="header_night">
+            <style name="header_night" />
+            <!-- <lv_label text="Configuration" style_text_color="0x00aa00" style_pad_left="10" style_pad_top="10" style_text_font="montserrat_16_bold" />
+            <lv_label text="2026-1-9 14:01" flex_grow="1" style_text_align="right" style_pad_right="10" style_pad_top="10"/> -->
+        </lv_obj>
+        <!-- body -->
+        <lv_obj width="100%" flex_grow="1" 
+            style_pad_all="0" flex_flow="row_reverse">
+            <!-- right_panel -->
+            <lv_obj name="right_panel" flex_grow="1" flex_flow="column"
+                width="100%" height="100%" style_pad_all="0">
+                <!-- 面包屑导航栏和返回按钮 -->
+                <lv_obj flex_flow="row" width="100%" height="50" style_pad_all="0" style_border_width="2" style_border_color="#green" style_border_side="bottom">
+                    <breadcrumb height="40" flex_grow="1" style_pad_all="5" />
+                    <lv_button height="100%" style_margin_right="10" style_margin_top="0" style_radius="5">
+                        <lv_label text="&lt;  Return" />
+                    </lv_button>
+                </lv_obj>
+                <lv_tabview width="100%" flex_grow="1" tab_pos="top" height="100%">
+                    <lv_tabview-tab text="Network1" name="Network1" flex_flow="column">
+                        <lv_obj width="100%" height="40" flex_flow="row" style_pad_all="0">
+                            <lv_label text="Allow Ethernet Download Upload" height="100%"/>
+                            <lv_obj flex_grow="1" style_bg_opa="0" style_border_width="0" height="100%"/>
+                            <lv_switch style_bg_color="0x00ff00" height="30"/>
+                        </lv_obj>
+                        <!-- Static ip -->
+                        <lv_obj width="100%" flex_grow="5" flex_flow="column">
+                            <lv_label text="Static IP" style_pad_all="0" />
+                            <lv_obj width="100%" flex_grow="1" flex_flow="row" style_pad_all="0" style_border_width="0">
+                                <lv_label text="IP Address" height="100%"/>
+                                <lv_obj flex_grow="1" style_bg_opa="0" style_border_width="0" height="100%"/>
+                                <ip_input width="300" height="100%" />
+                            </lv_obj>
+                            <lv_obj width="100%" flex_grow="1" flex_flow="row" style_pad_all="0" style_border_width="0">
+                                <lv_label text="Subnet Mask" height="100%"/>
+                                <lv_obj flex_grow="1" style_bg_opa="0" style_border_width="0" height="100%"/>
+                                <ip_input width="300" height="100%" />
+                            </lv_obj>
+                            <lv_obj width="100%" flex_grow="1" flex_flow="row" style_pad_all="0"   style_border_width="0">
+                                <lv_label text="Default Gateway" height="100%"/>
+                                <lv_obj flex_grow="1" style_bg_opa="0" style_border_width="0" height="100%"/>
+                                <ip_input width="300" height="100%" />
+                            </lv_obj>
+                            <lv_obj width="100%" flex_grow="1" flex_flow="row" style_pad_all="0"  style_border_width="0">
+                                <lv_obj flex_grow="1" style_bg_opa="0" style_border_width="0" height="100%"/>
+                                <lv_button style_bg_color="0x00ff00" height="30">
+                                    <lv_label text="SAVE" style_text_color="0xffffff"/>
+                                </lv_button>
+                            </lv_obj>
+                        </lv_obj>
+                        <!-- dhcp -->
+                        <lv_obj width="100%" flex_grow="3" flex_flow="column">
+                            <lv_obj width="100%" height="40" flex_flow="row" style_pad_all="0">
+                                <lv_label text="DHCP" height="100%"/>
+                                <lv_obj flex_grow="1" style_bg_opa="0" style_border_width="0" height="100%"/>
+                                <lv_switch style_bg_color="0x00ff00" height="30"/>
+                            </lv_obj>
+                            <lv_obj width="100%" flex_grow="1" flex_flow="row" style_pad_all="0"   style_border_width="0">
+                                <lv_label text="Host Name" height="100%"/>
+                                <lv_obj flex_grow="1" style_bg_opa="0" style_border_width="0" height="100%"/>
+                                <ip_input width="300" height="100%" />
+                            </lv_obj>
+                            <lv_obj width="100%" flex_grow="1" flex_flow="row" style_pad_all="0"  style_border_width="0">
+                                <lv_obj flex_grow="1" style_bg_opa="0" style_border_width="0" height="100%"/>
+                                <lv_button style_bg_color="0x00ff00" height="30">
+                                    <lv_label text="SAVE" style_text_color="0xffffff"/>
+                                </lv_button>
+                            </lv_obj>
+                        </lv_obj>
+                        <!-- dns -->
+                        <lv_obj width="100%" flex_grow="4" flex_flow="column">
+                            <lv_obj width="100%" height="40" flex_flow="row" style_pad_all="0">
+                                <lv_label text="DNS" height="100%"/>
+                                <lv_obj flex_grow="1" style_bg_opa="0" style_border_width="0" height="100%"/>
+                                <lv_switch style_bg_color="0x00ff00" height="30"/>
+                            </lv_obj>
+                            <lv_label text="MAC:    Ethernet1    00:01:23:44:34:00" style_pad_all="0" />
+                            <lv_obj width="100%" flex_grow="1" flex_flow="row" style_pad_all="0"   style_border_width="0">
+                                <lv_label text="IP Address (DNS)" height="100%"/>
+                                <lv_obj flex_grow="1" style_bg_opa="0" style_border_width="0" height="100%"/>
+                                <ip_input width="300" height="100%" />
+                            </lv_obj>
+                            <lv_obj width="100%" flex_grow="1" flex_flow="row" style_pad_all="0"  style_border_width="0">
+                                <lv_obj flex_grow="1" style_bg_opa="0" style_border_width="0" height="100%"/>
+                                <lv_button style_bg_color="0x00ff00" height="30">
+                                    <lv_label text="SAVE" style_text_color="0xffffff"/>
+                                </lv_button>
+                            </lv_obj>
+                        </lv_obj>
+                    </lv_tabview-tab>
+                    <lv_tabview-tab text="Network2" name="Network2">
+                        <!-- Network2内容 -->
+                        <lv_label text="hello2" style_pad_all="10" />
+                    </lv_tabview-tab>
+                    <lv_tabview-tab text="Network3" name="Network3">
+                        <!-- Network3内容 -->
+                        <lv_label text="hello3" style_pad_all="10" />
+                    </lv_tabview-tab>
+                </lv_tabview>
+            </lv_obj>
+            <!-- left_panel -->
+            <lv_obj flex_flow="column" width="200" style_pad_all="0" style_max_width="200" style_margin_all="0" style_border_width="2" style_outline_width="0" height="100%" style_border_color="#green" style_border_side="right" style_flex_cross_align="center" >
+                <style name="left_panel" />
+                <tabButton image_name="flower" btn_text="Offline" width="200" style_margin_all="0" style_border_width="0" style_outline_width="0"/>
+                <tabButton image_name="flower" btn_text="System" width="200" style_margin_all="0" style_border_width="0" style_outline_width="0" />
+                <tabButton image_name="flower" btn_text="Diagnostics" width="200" style_margin_all="0" style_border_width="0" style_outline_width="0" />
+                <lv_obj flex_grow="1" style_bg_opa="0" style_margin_all="0" style_border_width="0" style_outline_width="0"/>
+                <view flex_flow="row" width="200" style_pad_all="0" style_margin_all="0" style_border_width="0" style_bg_opa="0" height="40">
+                    <lv_obj flex_grow="1" style_bg_opa="0" tyle_pad_all="0" style_margin_all="0" style_border_width="0" height="40"/>
+                    <lv_switch />
+                    <lv_obj flex_grow="1" style_bg_opa="0" tyle_pad_all="0" style_margin_all="0" style_border_width="0" height="40"/>
+                </view>
+            </lv_obj>
+        </lv_obj>
+    </view>
+</component>
